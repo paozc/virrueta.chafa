@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for main navigation items */
+    justify-content: center; /* Center main navigation items */
+}
+
+nav ul li {
+    position: relative; /* Needed for positioning the dropdown */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px; /* Added horizontal padding */
+    transition: 0.3s;
+    display: block; /* Make the whole link clickable area */
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* --- Submenu Styles --- */
+nav ul li ul {
+    display: none; /* Hide submenu by default */
+    position: absolute; /* Position relative to parent li */
+    background-color: #444; /* Same background as parent nav */
+    min-width: 160px; /* Minimum width for submenu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; /* Ensure it appears above other content */
+    top: 100%; /* Position below the parent link */
+    left: 0;
+    flex-direction: column; /* Stack submenu items vertically */
+    padding: 5px 0; /* Add some padding inside the submenu */
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+}
+
+nav ul li:hover > ul {
+    display: flex; /* Show submenu on hover of parent li */
+}
+
+nav ul li ul li {
+    display: block; /* Submenu items should stack vertically */
+    margin: 0; /* Reset margin for submenu items */
+}
+
+nav ul li ul li a {
+    padding: 10px 15px; /* Padding for submenu links */
+    font-size: 1rem; /* Slightly smaller font for submenu */
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+nav ul li ul li a:hover {
+    background-color: #666; /* Darker hover for submenu */
+    border-radius: 0; /* No rounded corners inside submenu */
+}
+
+/* --- End Submenu Styles --- */
+
+
+section {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galeria img {
+    margin: 10px;
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+#acerca {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
